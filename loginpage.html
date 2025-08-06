@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>
+            ORDER
+        </title>
+        <style>
+            .login-box {
+                background: rgba(255,255,255,0.9);
+                border-radius: 10px;
+                box-shadow: 0 0 10px #aaa;
+                padding: 30px 40px;
+                width: 350px;
+                margin: 30px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .login-box input, .login-box select {
+                margin-bottom: 15px;
+                width: 90%;
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            .login-box label {
+                align-self: flex-start;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .login-box button {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: green;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .col-flex{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+        </style>
+        <script>
+    
+    function printLog(){
+        var nameNode = document.getElementById('name');
+        var phonenumberNode = document.getElementById('phone');
+        var roleNode = document.getElementById('role');
+        var quantityNode = document.getElementById('quantity');
+
+        var name = nameNode ? nameNode.value : '';
+        var phonenumber = phonenumberNode ? phonenumberNode.value : '';
+        var role = roleNode ? roleNode.value : '';
+        var quantity = quantityNode ? quantityNode.value : '';
+
+        console.log(`Name: ${name}`);
+        console.log(`Phone Number: ${phonenumber}`);
+        console.log(`Role: ${role}`);
+        console.log(`Quantity: ${quantity}`);
+
+        if (name && phonenumber && role && quantity) {
+            console.log('Your Order Is Placed Successfully');
+            alert('Order Placed Successfully');
+        } else {
+            alert('Kindly Fill All the Credentials');
+        }
+ }
+</script>
+
+    </head>
+    <body>
+        <div style="background-image: url('https://img.freepik.com/free-photo/scoop-down-fruit-ice-cream-multicolored-surface_23-2148150256.jpg?semt=ais_hybrid&w=740&q=80.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; min-height: 100vh;">
+            <h1 style="text-align:center;">Where every idea melts into magic</h1>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; min-height: 70vh;">
+                <img src="https://emmaduckworthbakes.com/wp-content/uploads/2023/06/Chocolate-Gelato-Recipe.jpg" width="300" height="300" style="border-radius: 12px; box-shadow: 0 0 10px #aaa; background: #fff;" />
+                <div class="login-box">
+                    <img src="https://yourguardianchef.com/wp-content/uploads/2023/02/Italian-Gelato-Recipe-Vanilla-Chocolate-and-Pistachios-1.jpg" width="100" height="100" style="margin-bottom: 15px;"/>
+                    <h2 style="margin-bottom: 20px;">Login to continue</h2>
+                    <form onsubmit="printLog(); return false;">
+                        <label for="name">Full Name:</label>
+                        <input type="text" placeholder="Full Name" id="name" required />
+                        <label for="phone">Phone number:</label>
+                        <input type="tel"  placeholder="Phone number (e.g. 123-456-7890)" id="phone" required /> <br />
+                        <label for=" Ice cream Name">Ice cream Name:</label>
+            <select id="Menu" name="Menu"  >
+            <option value="Select">Select</option>    
+            <option value="Tiramisu Truffle">Tiramisu Truffle</option>
+            <option value="Salted Caramel Swirl">Salted Caramel Swirl</option>
+            <option value="Espresso Affogato">Espresso Affogato</option>
+            <option value="Rose & Raspberry Romance">Rose & Raspberry Romance</option>
+            <option value="Nutella Nirvana">Nutella Nirvana</option>
+            <option value="Choco Chip Cookie Crave">Choco Chip Cookie Crave</option>
+            <option value="Death By Chocolate">Death By Chocolate</option>
+            <option value="Fudge Ripple Fantasy">Fudge Ripple Fantasy</option>
+            <option value="Mocha Melt">Mocha Melt</option>
+        </select>
+
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" min="1" placeholder="Quantity" id="quantity" required />
+                        <button type="submit">Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
